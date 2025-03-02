@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section brand-section">
-          <h3>MoviePro<span className="brand-dot">.</span></h3>
+          <h3>ChanceTV<span className="brand-dot">.</span></h3>
           <p>Empowering the next generation of filmmakers and artists through innovation, education, and opportunity.</p>
           <div className="social-links">
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="contact-info">
             <p>
               <i className="fas fa-envelope"></i>
-              info@moviepro.com
+              info@chancetv.com
             </p>
             <p>
               <i className="fas fa-phone"></i>
