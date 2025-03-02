@@ -1,0 +1,134 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  margin-bottom: 2rem;
+}
+
+.error-message {
+  background-color: rgba(229, 9, 20, 0.1);
+  color: #e50914;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f40612;
+}
+
+.login-footer {
+  text-align: center;
+  color: #cccccc;
+}
+
+.login-footer a {
+  color: #e50914;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #f40612;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Login/Register responsive */
+.auth-container {
+  min-height: calc(100vh - var(--header-height-mobile));
+  padding: 2rem var(--container-padding-mobile);
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .auth-container {
+    min-height: calc(100vh - var(--header-height-desktop));
+    padding: 4rem var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .auth-container {
+    padding: 6rem var(--container-padding-desktop);
+  }
+} 

@@ -1,0 +1,154 @@
+.academy {
+  min-height: 100vh;
+}
+
+.academy-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('/academy-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.academy-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.academy-intro {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.academy-intro h2 {
+  color: #e50914;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.courses-section {
+  padding: 4rem 0;
+}
+
+.courses-section h2 {
+  color: #e50914;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.course-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-details {
+  padding: 1.5rem;
+}
+
+.course-details h3 {
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.course-description {
+  margin-bottom: 1.5rem;
+  color: #cccccc;
+}
+
+.course-info {
+  margin-bottom: 1.5rem;
+}
+
+.course-info p {
+  margin-bottom: 0.5rem;
+}
+
+.course-price {
+  color: #e50914;
+  font-size: 1.2rem;
+}
+
+.course-highlights {
+  margin-bottom: 1.5rem;
+}
+
+.course-highlights h4 {
+  color: #e50914;
+  margin-bottom: 0.5rem;
+}
+
+.course-highlights ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.course-highlights li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.course-highlights li:before {
+  content: "•";
+  color: #e50914;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .academy-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .course-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+} 
