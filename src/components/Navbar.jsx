@@ -43,7 +43,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
       <div className="navbar-container">
         <div className="navbar-brand">
           <Link to="/">
-            MoviePro
+            ChanceTv
             <span className="brand-dot">.</span>
           </Link>
         </div>
