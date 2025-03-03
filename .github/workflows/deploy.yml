@@ -3,27 +3,28 @@ name: Deploy
 on:
   push:
     branches:
-      - main  # or 'master' depending on your default branch name
-  pull_request:
-    branches:
-      - main  # or 'master'
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      
-      - name: Deploy Frontend
-        uses: amondnet/vercel-action@v20
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID}}
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
-          
-      - name: Deploy Backend
-        uses: akhileshns/heroku-deploy@v3.12.12
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "chancetv-api"
-          heroku_email: ${{ secrets.HEROKU_EMAIL }} 
+          folder: build # or 'dist' depending on your build output folder
+          branch: gh-pages 
