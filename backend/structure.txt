@@ -1,0 +1,38 @@
+backend/
+├── config/
+│   ├── db.js
+│   └── default.js
+├── controllers/
+│   ├── authController.js
+│   ├── userController.js
+│   ├── eventController.js
+│   ├── academyController.js
+│   ├── auditionController.js
+│   ├── votingController.js
+│   └── streamingController.js
+├── middleware/
+│   ├── auth.js
+│   ├── error.js
+│   └── upload.js
+├── models/
+│   ├── User.js
+│   ├── Event.js
+│   ├── Academy.js
+│   ├── Audition.js
+│   ├── Vote.js
+│   └── Stream.js
+├── routes/
+│   ├── auth.js
+│   ├── users.js
+│   ├── events.js
+│   ├── academy.js
+│   ├── auditions.js
+│   ├── voting.js
+│   └── streaming.js
+├── utils/
+│   ├── validation.js
+│   └── helpers.js
+├── .env
+├── .gitignore
+├── package.json
+└── server.js 
