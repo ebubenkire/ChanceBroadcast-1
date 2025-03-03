@@ -2,7 +2,11 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main  # or 'master' depending on your default branch name
+  pull_request:
+    branches:
+      - main  # or 'master'
 
 jobs:
   deploy:

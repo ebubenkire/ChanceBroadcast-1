@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { authService } from '../services/authService'
+import api from '../services/api'
 import './Login.css'
 
 const Login = ({ setIsAuthenticated }) => {
@@ -21,11 +21,12 @@ const Login = ({ setIsAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await authService.login(formData)
+      const { data } = await api.post('/auth/login', formData)
+      localStorage.setItem('token', data.token)
       setIsAuthenticated(true)
       navigate('/')
     } catch (err) {
-      setError(err.response?.data?.msg || 'An error occurred')
+      setError(err.response?.data?.message || 'Login failed')
     }
   }
 

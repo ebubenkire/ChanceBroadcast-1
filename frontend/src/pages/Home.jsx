@@ -6,39 +6,37 @@ const Home = () => {
     <div className="home">
       <section className="hero">
         <div className="hero-content">
-          <h1>Where Talent Meets Opportunity</h1>
-          <p>Join the next generation of filmmakers and artists</p>
+          <h1>Welcome to ChanceTV</h1>
+          <p>Your platform for entertainment, learning, and opportunities</p>
           <div className="hero-buttons">
-            <Link to="/register" className="btn btn-primary">Get Started</Link>
-            <Link to="/about" className="btn btn-secondary">Learn More</Link>
+            <Link to="/register" className="btn-primary">Get Started</Link>
+            <Link to="/about" className="btn-secondary">Learn More</Link>
           </div>
         </div>
       </section>
 
       <section className="features">
-        <div className="container">
-          <h2 className="section-title">Why Choose MoviePro</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <i className="fas fa-film"></i>
-              <h3>Professional Training</h3>
-              <p>Learn from industry experts and master the art of filmmaking</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-users"></i>
-              <h3>Network Building</h3>
-              <p>Connect with fellow artists and industry professionals</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-star"></i>
-              <h3>Career Growth</h3>
-              <p>Take your career to the next level with our opportunities</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-video"></i>
-              <h3>Latest Technology</h3>
-              <p>Access state-of-the-art equipment and facilities</p>
-            </div>
+        <h2>What We Offer</h2>
+        <div className="features-grid">
+          <div className="feature-card">
+            <i className="fas fa-video"></i>
+            <h3>Live Streaming</h3>
+            <p>Watch live performances and events</p>
+          </div>
+          <div className="feature-card">
+            <i className="fas fa-graduation-cap"></i>
+            <h3>Academy</h3>
+            <p>Learn from industry professionals</p>
+          </div>
+          <div className="feature-card">
+            <i className="fas fa-star"></i>
+            <h3>Auditions</h3>
+            <p>Showcase your talent</p>
+          </div>
+          <div className="feature-card">
+            <i className="fas fa-vote-yea"></i>
+            <h3>Voting</h3>
+            <p>Support your favorite contestants</p>
           </div>
         </div>
       </section>

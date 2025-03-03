@@ -1,158 +1,149 @@
-.academy {
+.academy-page {
   min-height: 100vh;
+  background: #1a1a1a;
 }
 
 .academy-hero {
-  height: 40vh;
+  height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
               url('/academy-hero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
 }
 
-.academy-hero h1 {
-  font-size: 3.5rem;
+.hero-content h1 {
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
 
-.academy-intro {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.academy-intro h2 {
-  color: #e50914;
-  margin-bottom: 3rem;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature-card {
-  background-color: #1f1f1f;
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.feature-card h3 {
-  color: #e50914;
-  margin-bottom: 1rem;
-}
-
-.courses-container {
+.courses-section {
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.course-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #e50914;
 }
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
 .course-card {
-  background: white;
-  border-radius: 10px;
+  background: #2a2a2a;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
 }
 
 .course-card:hover {
   transform: translateY(-5px);
 }
 
-.course-header {
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-bottom: 1px solid #eee;
+.course-image {
+  position: relative;
+  height: 200px;
 }
 
-.level {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
-}
-
-.level.beginner { background: #e3f2fd; color: #1565c0; }
-.level.intermediate { background: #fff3e0; color: #f57c00; }
-.level.advanced { background: #fbe9e7; color: #d84315; }
-
-.course-content {
-  padding: 1.5rem;
-}
-
-.course-details {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.detail {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #666;
-}
-
-.instructor-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.instructor-info img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.course-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.enroll-btn {
-  width: 100%;
-  padding: 0.8rem;
-  background: #007bff;
+.course-level {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e50914;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
-.enroll-btn:hover:not(:disabled) {
-  background: #0056b3;
+.course-content {
+  padding: 1.5rem;
+  color: white;
 }
 
-.enroll-btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+.course-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.course-details {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: #999;
+}
+
+.course-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.course-price {
+  font-size: 1.5rem;
+  color: #e50914;
+}
+
+.btn-enroll {
+  padding: 0.8rem 1.5rem;
+  background: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-enroll:hover {
+  background: #f40612;
 }
 
 @media (max-width: 768px) {
-  .academy-hero h1 {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .course-card {
-    max-width: 400px;
-    margin: 0 auto;
+  .course-filters {
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    width: calc(50% - 0.5rem);
   }
 } 
